@@ -1,94 +1,40 @@
-# BankingApplication
+# Banking Application with Spring Boot
 
-Overview
-This is a comprehensive banking application built with Spring Boot that provides all essential banking functionalities with robust security measures and real-time email notifications. The application adheres to industry standards for financial transactions and ensures data integrity throughout all operations.
+This repository contains a Spring Boot-based banking application with comprehensive features for efficient banking operations. It includes APIs for account management, transactions, and statement generation, along with robust security and email notification functionalities.
 
-Features
-Core Banking Operations
-Account Management
+## Features
 
-Create new bank accounts with validation
+* **Account Management:**
+    * Account creation with validation.
+* **Transaction Management:**
+    * Money deposit.
+    * Money withdrawal with balance and transaction limit checks.
+    * Money transfer between accounts with validation.
+* **Statement Generation:**
+    * Retrieve bank statements within a specified date range.
+* **Security:**
+    * Spring Security for authentication and authorization.
+* **Email Notifications:**
+    * Email alerts for credit transactions.
+    * Email alerts for debit transactions.
+    * Email alerts for money transfers.
+    * Email alerts for login.
+    * Email alerts for statement generation.
+* **Validation:**
+    * Robust validation checks for all API requests.
 
-View account details
+## Technologies Used
 
-Close accounts (with proper checks)
+* Spring Boot
+* Spring Security
+* Java
+* MySQL Database
+* JavaMailSender
+* Swagger
 
-Transaction Services
+## Prerequisites
 
-Deposit money with validation
-
-Withdraw money with balance checks
-
-Fund transfers between accounts
-
-Transaction history tracking
-
-Reporting
-
-Generate bank statements for any date range
-
-View transaction history with filters
-
-Security Features
-Spring Security integration
-
-Role-based access control
-
-Secure authentication
-
-Password encryption
-
-CSRF protection
-
-Session management
-
-Notification System
-Real-time email alerts for:
-
-Account credits
-
-Account debits
-
-Fund transfers
-
-Login activities
-
-Statement generation requests
-
-Technology Stack
-Backend: Spring Boot 3.x
-
-Security: Spring Security
-
-Database: [Your Database: MySQL/PostgreSQL/MongoDB]
-
-Email: Java Mail API
-
-Build Tool: Maven/Gradle
-
-API Documentation: Swagger/OpenAPI (if included)
-
-API Endpoints
-Account Management
-POST /api/accounts - Create new account
-
-GET /api/accounts/{accountNumber} - Get account details
-
-DELETE /api/accounts/{accountNumber} - Close account
-
-Transaction Services
-POST /api/transactions/deposit - Deposit money
-
-POST /api/transactions/withdraw - Withdraw money
-
-POST /api/transactions/transfer - Transfer between accounts
-
-Reporting
-GET /api/statements - Generate statement (with date range parameters)
-
-Authentication
-POST /api/auth/login - User login
-
-POST /api/auth/logout - User logout
-
-POST /api/auth/register - Register new user
+* Java Development Kit (JDK) 17 or higher
+* Maven
+* Database (configured in `application.properties`
+* Email service credentials (configured in `application.properties`)
